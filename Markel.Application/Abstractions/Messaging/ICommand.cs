@@ -1,4 +1,4 @@
-﻿using Markel.Application.Models;
+﻿using Markel.Application.Abstractions.Results;
 using MediatR;
 
 namespace Markel.Application.Abstractions.Messaging;

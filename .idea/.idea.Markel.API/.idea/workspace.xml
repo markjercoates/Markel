@@ -9,11 +9,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="Initial Projects Creation" />
+    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="Database Migrations and Seed">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/ApiVersions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/CompaniesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Errors/Error.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Results/Result.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/ClaimErrors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/ClaimResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/GetClaimQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/GetClaimQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyErrors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/CompanyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Markel.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Markel.API.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommandHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Markel.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Markel.Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Models/Result.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Infrastructure/Markel.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Infrastructure/Markel.Infrastructure.csproj" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +59,13 @@
     "accountId": "efc826e0-e73b-4aca-a338-9b135d28bebd"
   }
 }]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06c046bf69aa4f768c77e50706275b1b26a820/ae/ee8ae81a/DbSet`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6edfbc273f1a4b46b04b576799c1dab7251e00/2c/686ff80f/Faker.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6edfbc273f1a4b46b04b576799c1dab7251e00/50/f63dc173/DataSet.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
@@ -43,6 +79,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    ".NET Launch Settings Profile.Markel.API: IIS Express.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -50,8 +87,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql",
+      "sqlite"
+    ]
   }
 }]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.Markel.API: IIS Express">
@@ -109,7 +152,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727216374865</updated>
-      <workItem from="1727216376105" duration="5005000" />
+      <workItem from="1727216376105" duration="53264000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Projects Creation">
       <option name="closed" value="true" />
@@ -119,7 +162,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727217989027</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="&#10;Project nuget references">
+      <option name="closed" value="true" />
+      <created>1727223899896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1727223899896</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Database Migrations and Seed">
+      <option name="closed" value="true" />
+      <created>1727301284886</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1727301284886</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,6 +211,31 @@
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial Projects Creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Projects Creation" />
+    <MESSAGE value="&#10;Project nuget references" />
+    <MESSAGE value="Database Migrations and Seed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Migrations and Seed" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Markel.API/Extensions/SeedDataExtensions.cs</url>
+          <line>10</line>
+          <properties documentPath="C:\Users\mark_\RiderProjects\Markel.API\Markel.API\Extensions\SeedDataExtensions.cs" containingFunctionPresentation="Method 'SeedData'">
+            <startOffsets>
+              <option value="234" />
+            </startOffsets>
+            <endOffsets>
+              <option value="300" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

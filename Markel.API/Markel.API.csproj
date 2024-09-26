@@ -17,7 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\Claims\" />
       <Folder Include="Controllers\Companies\" />
       <Folder Include="Middleware\" />
     </ItemGroup>
