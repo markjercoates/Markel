@@ -17,11 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\Companies\" />
-      <Folder Include="Middleware\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\Markel.Application\Markel.Application.csproj" />
       <ProjectReference Include="..\Markel.Infrastructure\Markel.Infrastructure.csproj" />
     </ItemGroup>

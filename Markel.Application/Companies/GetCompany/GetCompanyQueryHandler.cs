@@ -22,11 +22,11 @@ public class GetCompanyQueryHandler : IQueryHandler<GetCompanyQuery, CompanyResp
             {
                 Id = c.Id,
                 Name = c.Name,
-                Address1 = c.Address1!,
-                Address2 = c.Address2!,
-                Address3 = c.Address3!, 
-                PostCode = c.PostCode!,
-                Country = c.Country!,
+                Address1 = c.Address1,
+                Address2 = c.Address2,
+                Address3 = c.Address3, 
+                PostCode = c.PostCode,
+                Country = c.Country,
                 Active = c.Active,
                 InsuranceEndDate = c.InsuranceEndDate,
             })

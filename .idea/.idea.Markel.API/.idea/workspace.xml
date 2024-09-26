@@ -9,32 +9,60 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="Database Migrations and Seed">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/ApiVersions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/CompaniesController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Errors/Error.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Results/Result.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/ClaimErrors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/ClaimResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/GetClaimQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/GetClaimQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyErrors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/CompanyResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQueryHandler.cs" afterDir="false" />
+    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="Company Claim GetEndpoints">
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/ClaimTypes/ClaimTypesController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/AddClaimRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/UpdateClaimRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Companies/AddCompanyRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Controllers/Companies/UpdateCompanyRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.API/Middleware/ExceptionHandlingMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Behaviours/ValidationBehaviour.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Data/IUnitOfWork.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/ClaimTypeErrors.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/ClaimTypeResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/GetClaimType/GetClaimTypeQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/GetClaimType/GetClaimTypeQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/GetClaimTypes/GetAllClaimTypesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/ClaimTypes/GetClaimTypes/GetAllClaimTypesQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/AddClaim/AddClaimCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/AddClaim/AddClaimCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/AddClaim/AddClaimCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/ClaimExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/UpdateClaim/UpdateClaimCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/UpdateClaim/UpdateClaimCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/UpdateClaim/UpdateClaimCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/AddCompany/AddCompanyCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/AddCompany/AddCompanyCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/AddCompany/AddCompanyCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompanies/GetAllCompaniesQuery.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompanies/GetAllCompaniesQueryHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/UpdateCompany/UpdateCompanyCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/UpdateCompany/UpdateCompanyCommandHandler.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/UpdateCompany/UpdateCompanyCommandValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Exceptions/ValidationError.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Markel.Application/Exceptions/ValidationException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Claims.db" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Claims.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Controllers/Claims/CompaniesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Controllers/Companies/CompaniesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.API/Extensions/ApplicationBuilderExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Extensions/ApplicationBuilderExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Markel.API/Markel.API.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Markel.API.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Markel.API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommandHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/ICommandHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQuery.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Messaging/IQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Abstractions/Results/Result.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Abstractions/Results/Result.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Claims/GetClaim/ClaimResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Claims/ClaimResponse.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/CompanyResponse.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Entities/Claim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Entities/Claim.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Application/Entities/Company.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Entities/Company.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Markel.Application/Markel.Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Markel.Application.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Models/Result.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Infrastructure/Markel.Infrastructure.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Infrastructure/Markel.Infrastructure.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Infrastructure/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Infrastructure/Data/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Markel.Infrastructure/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Infrastructure/DependencyInjection.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +91,7 @@
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///AIAssistantSnippet." root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/06c046bf69aa4f768c77e50706275b1b26a820/ae/ee8ae81a/DbSet`1.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/24372012c6c94138bf3f496e104366ffc8f918/d8/eb3b99ea/IReadOnlyList`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6edfbc273f1a4b46b04b576799c1dab7251e00/2c/686ff80f/Faker.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6edfbc273f1a4b46b04b576799c1dab7251e00/50/f63dc173/DataSet.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -79,7 +108,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    ".NET Launch Settings Profile.Markel.API: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.Markel.API: IIS Express.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
@@ -152,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727216374865</updated>
-      <workItem from="1727216376105" duration="53264000" />
+      <workItem from="1727216376105" duration="89432000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Projects Creation">
       <option name="closed" value="true" />
@@ -178,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727301284886</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Company Claim GetEndpoints">
+      <option name="closed" value="true" />
+      <created>1727318959011</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727318959011</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +250,8 @@
     <MESSAGE value="Initial Projects Creation" />
     <MESSAGE value="&#10;Project nuget references" />
     <MESSAGE value="Database Migrations and Seed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Database Migrations and Seed" />
+    <MESSAGE value="Company Claim GetEndpoints" />
+    <option name="LAST_COMMIT_MESSAGE" value="Company Claim GetEndpoints" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -230,6 +268,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Markel.API/Controllers/Companies/CompaniesController.cs</url>
+          <line>47</line>
+          <properties documentPath="C:\Users\mark_\RiderProjects\Markel.API\Markel.API\Controllers\Companies\CompaniesController.cs" containingFunctionPresentation="Method 'AddCompany'">
+            <startOffsets>
+              <option value="1488" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1683" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
