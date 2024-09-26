@@ -20,14 +20,16 @@ public class Company : Entity
         Active = active;
         InsuranceEndDate = insuranceEndDate;
     }
+
     public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
-    public string Address1 { get; set; } = string.Empty;
-    public string Address2 { get; set; } = string.Empty;
-    public string Address3 { get; set; } = string.Empty;
-    public string PostCode { get; set; } = string.Empty;
-    public string Country { get; set; } = string.Empty;
+    public required string Name { get; set; } 
+    public string? Address1 { get; set; } 
+    public string? Address2 { get; set; } 
+    public string? Address3 { get; set; } 
+    public string? PostCode { get; set; } 
+    public string? Country { get; set; } 
     public bool Active { get; set; }
     public DateTime InsuranceEndDate { get; set; }
+    public bool HasActivePolicy => Active && InsuranceEndDate > DateTime.Now;
     public ICollection<Claim> Claims { get; set; } = new HashSet<Claim>();
 }

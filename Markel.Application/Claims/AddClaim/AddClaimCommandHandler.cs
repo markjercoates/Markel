@@ -37,9 +37,13 @@ public class AddClaimCommandHandler : ICommandHandler<AddClaimCommand, int>
         {
             return Result.Failure<int>(ClaimTypeErrors.NotFound);
         }
-        
+
         var claim = new Claim(0, request.ClaimTypeId, request.UCR, request.ClaimDate, request.LossDate,
-            request.AssuredName, request.IncurredLoss, request.Closed, request.CompanyId);
+            request.AssuredName, request.IncurredLoss, request.Closed, request.CompanyId)
+        {
+            UCR = request.UCR,
+            AssuredName = request.AssuredName,
+        };
         
         _claimRepository.Add(claim);
         

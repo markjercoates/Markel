@@ -6,9 +6,6 @@ public class UpdateClaimCommandValidator : AbstractValidator<UpdateClaimCommand>
 {
     public UpdateClaimCommandValidator()
     {
-        RuleFor(x => x.Id).NotEqual(default(int))
-            .WithMessage("The Claim ID is required");
-        
         RuleFor(x => x.UCR).NotEmpty();
         
         RuleFor(x => x.UCR).MaximumLength(20);

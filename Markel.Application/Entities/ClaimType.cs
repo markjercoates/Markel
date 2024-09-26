@@ -8,7 +8,7 @@ public class ClaimType : Entity
 
     public ClaimType(int id, string name)
     {
-        Id = Id;
+        Id = id;
         Name = name;
     }
     public int Id { get; set; }

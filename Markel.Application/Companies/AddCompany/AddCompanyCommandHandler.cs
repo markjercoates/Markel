@@ -19,8 +19,11 @@ public class AddCompanyCommandHandler : ICommandHandler<AddCompanyCommand, int>
     
     public async Task<Result<int>> Handle(AddCompanyCommand request, CancellationToken cancellationToken = default)
     {
-       var company = new Company(0, request.Name, request.Address1, request.Address2, request.Address3,
-            request.PostCode, request.Country, request.IsActive, request.InsuranceEndDate);
+        var company = new Company(0, request.Name, request.Address1, request.Address2, request.Address3,
+            request.PostCode, request.Country, request.IsActive, request.InsuranceEndDate)
+        {
+            Name = request.Name,
+        };
         
         _companyRepository.Add(company);
         

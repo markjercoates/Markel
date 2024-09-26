@@ -16,5 +16,6 @@ public class CompanyConfiguration : IEntityTypeConfiguration<Company>
         builder.Property(e => e.Address3).HasMaxLength(100);
         builder.Property(e => e.PostCode).HasMaxLength(20);
         builder.Property(e => e.Country).HasMaxLength(50);
+        builder.Ignore(e => e.HasActivePolicy);
     }
 }

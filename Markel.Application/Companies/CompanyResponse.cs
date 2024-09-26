@@ -11,4 +11,6 @@ public class CompanyResponse
     public string Country { get; init; } = string.Empty;
     public bool Active { get; init; }
     public DateTime InsuranceEndDate { get; init; }
+    
+    public bool HasActivePolicy { get; init; }
 }
