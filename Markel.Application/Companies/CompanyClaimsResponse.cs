@@ -1,6 +1,8 @@
-﻿namespace Markel.Application.Companies;
+﻿using Markel.Application.Claims;
 
-public class CompanyResponse
+namespace Markel.Application.Companies;
+
+public class CompanyClaimsResponse
 {
     public int Id { get; init; }
     public required string Name { get; init; } 
@@ -12,4 +14,5 @@ public class CompanyResponse
     public bool Active { get; init; }
     public DateTime InsuranceEndDate { get; init; }
     public bool HasActivePolicy { get; init; }
+    public IEnumerable<ClaimResponse> Claims { get; set; } = new List<ClaimResponse>();
 }

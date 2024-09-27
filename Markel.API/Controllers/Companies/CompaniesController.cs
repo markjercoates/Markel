@@ -32,6 +32,16 @@ public class CompaniesController : ControllerBase
         return result.IsSuccess ? Ok(result.Value) : NotFound();
     }
     
+    [HttpGet("{id}/Claims")]
+    public async Task<IActionResult> GetCompanyClaims(int id, CancellationToken cancellationToken = default)
+    {
+        var query = new GetCompanyClaimsQuery(id);
+
+        Result<CompanyClaimsResponse> result = await _sender.Send(query, cancellationToken);
+
+        return result.IsSuccess ? Ok(result.Value) : NotFound();
+    }
+    
     [HttpGet()]
     public async Task<IActionResult> GetCompanies(CancellationToken cancellationToken = default)
     {

@@ -5,18 +5,19 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Markel.Application.Claims.GetClaims;
 
-public class GetAllClaimsQueryHandler : IQueryHandler<GetAllClaimsQuery, IReadOnlyList<ClaimResponse>>
+public class GetAllClaimsByCompanyQueryHandler : IQueryHandler<GetAllClaimsByCompanyQuery, IReadOnlyList<ClaimResponse>>
 {
     private readonly IApplicationDbContext _context;
 
-    public GetAllClaimsQueryHandler(IApplicationDbContext context)
+    public GetAllClaimsByCompanyQueryHandler(IApplicationDbContext context)
     {
         _context = context;
     }
 
-    public async Task<Result<IReadOnlyList<ClaimResponse>>> Handle(GetAllClaimsQuery request, CancellationToken cancellationToken = default)
+    public async Task<Result<IReadOnlyList<ClaimResponse>>> Handle(GetAllClaimsByCompanyQuery request, CancellationToken cancellationToken = default)
     {
         List<ClaimResponse> claims = await _context.Claims.AsNoTracking()
+            .Where(c => c.CompanyId == request.CompanyId)
             .Include(c => c.ClaimType)
             .Include(c => c.Company)
             .Select(c => new ClaimResponse

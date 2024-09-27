@@ -42,6 +42,16 @@ public class ClaimsController : ControllerBase
         return result.IsSuccess ? Ok(result.Value) : NotFound();
     }
     
+    [HttpGet("Company/{companyId}")]
+    public async Task<IActionResult> GetClaimsByCompany(int companyId, CancellationToken cancellationToken = default)
+    {
+        var query = new GetAllClaimsByCompanyQuery(companyId);
+
+        Result<IReadOnlyList<ClaimResponse>> result = await _sender.Send(query, cancellationToken);
+
+        return result.IsSuccess ? Ok(result.Value) : NotFound();
+    }
+    
     [HttpPost]
     public async Task<IActionResult> AddClaim(AddClaimRequest request, CancellationToken cancellationToken = default)
     {
