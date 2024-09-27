@@ -28,36 +28,43 @@ public static class SeedDataExtensions
                 Address3 = faker.Address.City(),
                 PostCode = faker.Address.ZipCode(),
                 Country = "UK",
-                Active = true,
-                InsuranceEndDate = faker.Date.Future()
+                Active = faker.Random.Bool(),
+                InsuranceEndDate = faker.Date.Between(DateTime.Now.AddMonths(-1), DateTime.Now.AddMonths(3)),
             });
         }
 
         dbContext.Companies.AddRange(companies);
         dbContext.SaveChanges();
 
-        claimTypes.Add(new ClaimType{ Name = "Life" });
-        claimTypes.Add(new ClaimType{ Name = "Auto" });
-        claimTypes.Add(new ClaimType{ Name = "Health" });
-        claimTypes.Add(new ClaimType{ Name = "Homeowner" });
-        claimTypes.Add(new ClaimType{ Name = "Travel" });
-        
-        dbContext.ClaimTypes.AddRange(claimTypes);
-        dbContext.SaveChanges();
-
-        int claimTypeId = dbContext.ClaimTypes.First().Id;
-        int companyId = dbContext.Companies.First().Id;
-        claims.Add(new Claim
+        if (!dbContext.ClaimTypes.Any())
         {
-            UCR = "AA123456789", 
-            AssuredName = faker.Person.FullName,
-            ClaimTypeId = claimTypeId,
-            CompanyId = companyId,
-            ClaimDate = DateTime.Now.AddDays(-7),
-            LossDate = DateTime.Now.AddDays(-10),
-            Closed = false,
-            IncurredLoss = 1000.00m,
-        });
+            claimTypes.Add(new ClaimType { Name = "Life" });
+            claimTypes.Add(new ClaimType { Name = "Auto" });
+            claimTypes.Add(new ClaimType { Name = "Health" });
+            claimTypes.Add(new ClaimType { Name = "Homeowner" });
+            claimTypes.Add(new ClaimType { Name = "Travel" });
+            
+            dbContext.ClaimTypes.AddRange(claimTypes);
+            dbContext.SaveChanges();
+        }
+        
+        var companyIds = dbContext.Companies.Select(i => i.Id).ToList();
+        var claimTypesIds = dbContext.ClaimTypes.Select(i => i.Id).ToList();
+       
+        for (int i = 0; i < 20; i++)
+        {
+            claims.Add(new Claim
+            {
+                UCR = faker.Random.AlphaNumeric(15).ToUpper(),
+                AssuredName = faker.Name.FullName(),
+                ClaimTypeId = faker.PickRandom(claimTypesIds),
+                CompanyId = faker.PickRandom(companyIds),
+                ClaimDate = faker.Date.Between(DateTime.Now.AddMonths(-1), DateTime.Now),
+                LossDate = faker.Date.Between(DateTime.Now.AddMonths(-4), DateTime.Now.AddMonths(-2)),
+                Closed = faker.Random.Bool(),
+                IncurredLoss = faker.Finance.Amount(100, 5000, 2)
+            });
+        }
         
         dbContext.Claims.AddRange(claims);
         dbContext.SaveChanges();
