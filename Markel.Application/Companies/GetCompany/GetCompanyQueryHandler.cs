@@ -35,8 +35,7 @@ public class GetCompanyQueryHandler : IQueryHandler<GetCompanyQuery, CompanyResp
 
         if (companyResponse is null)
         {
-            return Result.Failure<CompanyResponse>(CompanyErrors
-                .CustomNotFound($"Company with specified identifier {request.Id} was not found"));
+            return Result.Failure<CompanyResponse>(CompanyErrors.NotFound);
         }
         
         return companyResponse;

@@ -1,12 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.API", "Markel.API\Markel.API.csproj", "{E8D350A8-5A64-4CC8-A5B2-5F2B79C33E4B}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35303.130
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markel.API", "Markel.API\Markel.API.csproj", "{E8D350A8-5A64-4CC8-A5B2-5F2B79C33E4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Application", "Markel.Application\Markel.Application.csproj", "{43F4C847-D4DA-4176-82AF-8376BA09C4E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markel.Application", "Markel.Application\Markel.Application.csproj", "{43F4C847-D4DA-4176-82AF-8376BA09C4E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Infrastructure", "Markel.Infrastructure\Markel.Infrastructure.csproj", "{53B3A256-2D22-4B20-A0FA-70C5C6958418}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markel.Infrastructure", "Markel.Infrastructure\Markel.Infrastructure.csproj", "{53B3A256-2D22-4B20-A0FA-70C5C6958418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.UnitTests", "Markel.UnitTests\Markel.UnitTests.csproj", "{1D61FD86-0D7B-41E7-8DEB-F7139C86BB3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markel.UnitTests", "Markel.UnitTests\Markel.UnitTests.csproj", "{1D61FD86-0D7B-41E7-8DEB-F7139C86BB3B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markel.Application.IntegrationTests", "Markel.IntegrationTests\Markel.Application.IntegrationTests.csproj", "{986037DE-6158-4049-B9C5-F65A349C654C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markel.Api.IntegrationTests", "Markel.Api.IntegrationTests\Markel.Api.IntegrationTests.csproj", "{35369B48-F06F-40D2-BAC4-26BDC989FD23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +37,19 @@ Global
 		{1D61FD86-0D7B-41E7-8DEB-F7139C86BB3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D61FD86-0D7B-41E7-8DEB-F7139C86BB3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D61FD86-0D7B-41E7-8DEB-F7139C86BB3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{986037DE-6158-4049-B9C5-F65A349C654C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{986037DE-6158-4049-B9C5-F65A349C654C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{986037DE-6158-4049-B9C5-F65A349C654C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{986037DE-6158-4049-B9C5-F65A349C654C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35369B48-F06F-40D2-BAC4-26BDC989FD23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35369B48-F06F-40D2-BAC4-26BDC989FD23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35369B48-F06F-40D2-BAC4-26BDC989FD23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35369B48-F06F-40D2-BAC4-26BDC989FD23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {183F52F9-FF01-4B42-BC05-2277043DEA8C}
 	EndGlobalSection
 EndGlobal

@@ -12,32 +12,15 @@ public class AddClaimCommandHandler : ICommandHandler<AddClaimCommand, int>
 {
     private readonly IUnitOfWork _unitOfWork;
     private readonly IClaimRepository _claimRepository;
-    private readonly ICompanyRepository _companyRepository;
-    private readonly IClaimTypeRepository _claimTypeRepository;
-
-    public AddClaimCommandHandler(IUnitOfWork unitOfWork, IClaimRepository claimRepository, 
-                ICompanyRepository companyRepository, IClaimTypeRepository claimTypeRepository)
+  
+    public AddClaimCommandHandler(IUnitOfWork unitOfWork, IClaimRepository claimRepository)
     {
         _unitOfWork = unitOfWork;
-        _claimRepository = claimRepository;
-        _companyRepository = companyRepository;
-        _claimTypeRepository = claimTypeRepository;
+        _claimRepository = claimRepository;      
     }
     
     public async Task<Result<int>> Handle(AddClaimCommand request, CancellationToken cancellationToken = default)
     {
-        var company = await _companyRepository.GetByIdAsync(request.CompanyId);
-        if (company == null)
-        {
-            return Result.Failure<int>(CompanyErrors.NotFound);
-        }
-        
-        var claimType = await _claimTypeRepository.GetByIdAsync(request.ClaimTypeId);
-        if (claimType == null)
-        {
-            return Result.Failure<int>(ClaimTypeErrors.NotFound);
-        }
-
         var claim = new Claim(0, request.ClaimTypeId, request.UCR, request.ClaimDate, request.LossDate,
             request.AssuredName, request.IncurredLoss, request.Closed, request.CompanyId)
         {

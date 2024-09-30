@@ -9,17 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="Clean up null reference problems">
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsByCompany.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsByCompanyQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyClaimsResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyClaimsQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Markel.Application/Companies/GetCompany/GetCompanyClaimsQueryHandler.cs" afterDir="false" />
+    <list default="true" id="210abea1-4ee6-4431-926c-7a5a026514c4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Markel.API/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Controllers/Claims/ClaimsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.API/Controllers/Companies/CompaniesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.API/Controllers/Companies/CompaniesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Claims/GetClaims/GetAllClaimsQueryHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Markel.Application/Companies/CompanyResponse.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Markel.Application/Companies/CompanyResponse.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +129,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1727216374865</updated>
-      <workItem from="1727216376105" duration="100660000" />
+      <workItem from="1727216376105" duration="107479000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Projects Creation">
       <option name="closed" value="true" />
@@ -188,7 +179,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727392185493</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="GetCompanyClaims">
+      <option name="closed" value="true" />
+      <created>1727397088580</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1727397088580</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Seeding data dynamic">
+      <option name="closed" value="true" />
+      <created>1727402806246</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1727402806246</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +233,9 @@
     <MESSAGE value="Company Claim GetEndpoints" />
     <MESSAGE value="Complete controllers and app layer" />
     <MESSAGE value="Clean up null reference problems" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean up null reference problems" />
+    <MESSAGE value="GetCompanyClaims" />
+    <MESSAGE value="Seeding data dynamic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Seeding data dynamic" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
