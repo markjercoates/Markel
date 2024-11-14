@@ -11,7 +11,7 @@
 - We need an endpoint that will allow us to update a claim
 - We need at least one unit test to be created
 
-# Database Structure
+## Database Structure
 CREATE TABLE Claims
 (
 	UCR VARCHAR(20),
